@@ -5,13 +5,14 @@ var os = require('os');
 var path = require('path');
 
 var platform = os.platform();
-if (platform !== 'darwin' && platform !=='linux' && platform !== 'win32') {
+//adding browser, for use case when module is bundled using browserify. and added to html using src.
+if (platform !== 'darwin' && platform !=='linux' && platform !== 'win32' && platform !=="browser") {
   console.error('Unsupported platform.');
   process.exit(1);
 }
 
 var arch = os.arch();
-if (platform === 'darwin' && arch !== 'x32') {
+if (platform === 'darwin' && arch !== 'x64') {
   console.error('Unsupported architecture.');
   process.exit(1);
 }
