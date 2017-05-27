@@ -1,6 +1,10 @@
 ffprobe-static
 ====
 
+
+**-->Modified version<--** adding `browser`, as a platform option, for use case when module is bundled using browserify. and added to html using src.The module untimately it returns a file path to the binary. This is tailored for a use case such as that of [autoEdit.io](http://autoEdit.io) where it is an electron app where the front end is in backbone and bundled with browserify, while the backend, is a series of node modules, where the code to run ffmpeg ultimatly resides. 
+
+
 Static binaries for `ffprobe`. OSX only at the moment, please send a PR if you would like to help with adding support for other platforms.
 
 Based on <https://github.com/eugeneware/ffmpeg-static>.
