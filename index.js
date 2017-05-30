@@ -1,28 +1,34 @@
-//
-// With credits to https://github.com/eugeneware/ffmpeg-static
-//
-var os = require('os');
-var path = require('path');
+var os = require('os')
+var path = require('path')
 
-var platform = os.platform();
+var platform = os.platform()
+//patch for compatibilit with electron-builder, for smart built process.
+if(platform == "darwin"){
+	platform = "mac";
+}else if(platform == "win32"){
+	platform = "win";
+}
 //adding browser, for use case when module is bundled using browserify. and added to html using src.
-if (platform !== 'darwin' && platform !=='linux' && platform !== 'win32' && platform !=="browser") {
-  console.error('Unsupported platform.');
-  process.exit(1);
+if (platform !== 'linux' && platform !== 'mac' && platform !== 'win' && platform !=="browser") {
+  console.error('Unsupported platform.', platform);
+  process.exit(1)
 }
 
-var arch = os.arch();
-if (platform === 'darwin' && arch !== 'x64') {
-  console.error('Unsupported architecture.');
-  process.exit(1);
+var arch = os.arch()
+if (platform === 'mac' && arch !== 'x64') {
+  console.error('Unsupported architecture.')
+  process.exit(1)
 }
 
-var ffprobePath = path.join(
+
+
+
+var ffmpegPath = path.join(
   __dirname,
   'bin',
   platform,
   arch,
-  platform === 'win32' ? 'ffprobe.exe' : 'ffprobe'
-);
+  platform === 'win' ? 'ffmpeg.exe' : 'ffmpeg'
+)
 
-exports.path = ffprobePath;
+exports.path = ffmpegPath;
