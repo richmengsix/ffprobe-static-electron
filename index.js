@@ -20,7 +20,7 @@ if (platform === 'mac' && arch !== 'x64') {
   process.exit(1)
 }
 
-var ffmpegPath = path.join(
+var ffprobePath = path.join(
   __dirname,
   'bin',
   platform,
