@@ -17,7 +17,7 @@ Usage
 ----
 
 ```js
-var ffprobe = require('ffprobe-static');
+var ffprobe = require('ffprobe-static-electron');
 console.log(ffprobe.path);
 ```
 
