@@ -1,4 +1,4 @@
-# `ffprobe-static-electron`
+# `ffprobe-static`
 
 
 **-->Modified version<--** adding `browser`, as a platform option, for use case when module is bundled using browserify. and added to html using src.The module untimately it returns a file path to the binary. This is tailored for a use case such as that of [autoEdit.io](http://autoEdit.io) where it is an electron app where the front end is in backbone and bundled with browserify, while the backend, is a series of node modules, where the code to run ffprobe ultimatly resides. 
@@ -17,7 +17,7 @@ Usage
 ----
 
 ```js
-var ffprobe = require('ffprobe-static-electron');
+var ffprobe = require('ffprobe-static');
 console.log(ffprobe.path);
 ```
 
