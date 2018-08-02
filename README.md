@@ -1,4 +1,4 @@
-# `ffprobe-static`
+# `ffprobe-static-electron`
 
 
 **-->Modified version<--** adding `browser`, as a platform option, for use case when module is bundled using browserify. and added to html using src.The module untimately it returns a file path to the binary. This is tailored for a use case such as that of [autoEdit.io](http://autoEdit.io) where it is an electron app where the front end is in backbone and bundled with browserify, while the backend, is a series of node modules, where the code to run ffprobe ultimatly resides. 
@@ -13,11 +13,18 @@ Based on <https://github.com/eugeneware/ffmpeg-static>.
 
 Binaries are from <http://ffmpeg.zeranoe.com/builds/>
 
-Usage
-----
+## Installation
+
+This module is installed via npm:
+
+``` bash
+$ npm install ffmpeg-static-electron
+```
+
+## Usage
 
 ```js
-var ffprobe = require('ffprobe-static');
+var ffprobe = require('ffprobe-static-electron');
 console.log(ffprobe.path);
 ```
 
