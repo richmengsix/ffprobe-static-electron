@@ -1,9 +1,16 @@
 # `ffprobe-static-electron`
 
+The module returns a file path to the binary for the target operating system. 
 
-**-->Modified version<--** adding `browser`, as a platform option, for use case when module is bundled using browserify. and added to html using src.The module untimately it returns a file path to the binary. This is tailored for a use case such as that of [autoEdit.io](http://autoEdit.io) where it is an electron app where the front end is in backbone and bundled with browserify, while the backend, is a series of node modules, where the code to run ffprobe ultimatly resides. 
+It is a modified version from the original [ffprobe-static](https://github.com/pietrop/ffprobe-static) to use [`electron-builder` file macros  in `package.json`, where OS name are `mac`, `linux` or `win`](https://www.electron.build/file-patterns/#file-macros)
 
-see also[modified ffmpeg-static](https://github.com/pietrop/ffmpeg-static)
+In `ffprobe-static`, recognising the target OS is done with [`os.platform()`](https://nodejs.org/api/os.html#os_os_platform) where mac os x is  recognised as`darwin` rather then `mac`.
+
+The need to tailor ffmpeg-static to use with `electron-builder` came from a use cases such as that of [autoEdit.io](http://autoEdit.io). 
+
+<!-- I've also added `browser`, as a platform option, for use case when module is use client side, eg bundled using browserify.-->
+
+
 
 ---
 
