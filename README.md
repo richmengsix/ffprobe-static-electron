@@ -25,7 +25,7 @@ Binaries are from <http://ffmpeg.zeranoe.com/builds/>
 This module is installed via npm:
 
 ``` bash
-$ npm install ffmpeg-static-electron
+$ npm install ffprobe-static-electron
 ```
 
 ## Usage
