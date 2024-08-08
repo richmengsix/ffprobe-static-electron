@@ -1,6 +1,6 @@
 # Update from fork:
 * Use `ffmpeg-2023-02-19-git-2aec86695a-essentials_build/x64/ffprobe.exe` from https://www.gyan.dev/ffmpeg/builds/
-
+* Use Release: 7.0.2 (07 Aug 2024 21:02 CEST) from https://ffmpeg.martin-riedl.de/
 
 # `ffprobe-static-electron`
 
