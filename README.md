@@ -1,3 +1,9 @@
+# Update 20250512
+* Mac arm64: Use ffprobe version 6.1.1-https://www.martin-riedl.de
+
+[Sync with ffmpeg] Update because ffmpeg 7.1.1 (also 7.0.2) suffer from frame read fps error (for high color fidelity mode). Fix is downgrade to ffmpeg 6.1.1
+
+
 # Update 20250428
 * Win x64: Roll back to `ffmpeg-2023-02-19-git-2aec86695a-essentials_build/x64/ffprobe.exe` from https://www.gyan.dev/ffmpeg/builds/
 
